@@ -3,7 +3,7 @@
 ## Introduction 
 Pensieve is a neuro-friendly digital workspace designed to eliminate friction in capturing, organizing, and visualizing ideas. Combining the spontaneity of sketching, the structure of mind mapping, and the efficiency of one-click capture, it serves as an "external cortex" for overthinkers, creatives, and productivity-driven users. 
  
-## Guiding Principle 
+## Guiding Principle
 - "Brain dump releases hormones similar to taking a shit in the morning."
 - "Don’t overthink it, Pensieve it out, sleep better."
 
