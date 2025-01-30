@@ -279,6 +279,83 @@ For deeper insights, explore [Heptabase](https://heptabase.com) or [Scrintal](ht
 
 ---
 
+
+# **MVP Scope Prioritization [Update]**  
+**Primary Focus**: *Drag-and-drop multimedia stickers with basic playback.*  
+**Deferred**: Infinite canvas, advanced tools, collaboration.  
+
+
+### **User Flow for Multimedia Stickers**  
+1. **Add Media**:  
+   - Tap "+" → Choose:  
+     - *Upload* (gallery/file picker).  
+     - *Record* (audio/video via device mic/camera).  
+     - *Screenshot/Screen Record* 
+   - Media appears as a draggable sticker/card on the canvas.  
+
+2. **Interact**:  
+   - Drag to reposition.  
+   - Tap to play (opens native player modal).  
+   - Long-press to delete.  
+
+3. **Export**:  
+   - PDF flattens stickers/drawings into static images.  
+   - Optional manual backup to Supabase (hidden behind settings).  
+4. **Cloud Sync**:  
+   - Auto-background sync.
+
+---
+
+### **What to Cut for MVP**  
+1. **Advanced Media Editing**:  
+   - No cropping/filters for images.  
+   - No video trimming.  
+2. **Stylus Enhancements**:  
+   - Tilt support.  
+   - Android SPen pressure sensitivity.   
+
+---
+
+### **Technical Simplifications**  
+#### **1. Media Playback**  
+- **Mobile**: Use native OS players (iOS `AVPlayerViewController`, Android `ExoPlayer`).  
+- **Web**: HTML5 `<video>`/`<audio>` tags with browser defaults.  
+
+#### **2. File Handling**  
+- **Max Media Size**: 25MB per file (enforced client-side).  
+- **Formats**:  
+  - Images: PNG/JPEG.  
+  - Video: MP4 (H.264).  
+  - Audio: MP3.  
+
+#### **3. Canvas Performance**  
+- **Limit Elements**: 50 medias/drawings per canvas (prevents lag).  
+- **No Layers**: All elements rendered in a single plane.  
+
+---
+
+### **Edge Cases to Test**  
+1. **Large Media Files**:  
+   - Show “File too large” toast if >25MB.  
+2. **Cross-Platform Media**:  
+   - Ensure MP4/MP3 files play on all devices (avoid codec issues).  
+
+---
+
+### **Why This Works**  
+- **Focus on USP**: Multimedia stickers are fully functional and intuitive.  
+- **Reduced Complexity**: no advanced tools, no real-time collaboration feature.  
+- **Launch Speed**: MVP achievable in **6-8 weeks** with 1-2 developers.  
+
+---
+
+### **Post-MVP Roadmap**  
+1. **Phase 1**: Android + Web ports.  
+2. **Phase 2**: Real-time sync (Supabase Realtime).  
+3. **Phase 3**: AI auto-tagging (OCR/Whisper.cpp).  
+
+---
+
 ## **Conclusion**  
 Pensieve isn’t just a tool—it’s a *mental hygiene* product. By treating idea capture as a biological need (like the "brain dump" morning ritual), it redefines how users interact with their thoughts. Pensieve’s MVP focuses on becoming the fastest, most intuitive way to externalize thoughts.
 
