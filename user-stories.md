@@ -1,19 +1,4 @@
->### **Chain of Thoughts**
->*Okay, let me start by understanding the user's request. They realized they jumped into UI screens too quickly and now want to backtrack to create detailed user stories and acceptance criteria first. The user also has specific UX considerations they want highlighted.
-First, I need to structure the response to focus on user stories and acceptance criteria before moving to UI screens. The user mentioned three key points about intuitiveness: immediate blank canvas on app open, no auto-save unless elements are added, and media stickers that can be freely placed and played.
-I should start by outlining user stories that align with these points. For each user story, acceptance criteria must be defined to ensure all requirements are met. Let me think about the main functionalities: instant canvas access, media handling, auto-save conditions, and navigation.
-The user wants the app to open directly to a blank canvas. So a user story about immediate access makes sense. The acceptance criteria here would include no login screens, immediate availability of tools, and performance metrics.
-Next, the media stickers. The user wants media files to be placed like stickers, movable and playable. This requires a user story around media integration with criteria covering drag-and-drop functionality, previews, and playback.
-Auto-save only after adding elements is another critical point. A user story about auto-save conditions with criteria to check when the canvas is saved and when it's not.
-Navigation and discovery need a user story too, ensuring users can find features without clutter. Acceptance criteria here would involve intuitive icons and gestures.
-Then, I need to think about edge cases and additional scenarios, like handling empty canvases and collaboration. Each of these will have their own user stories and criteria.
-After laying out all user stories and acceptance criteria, I can then list the necessary UI screens, considering mobile, tablet, and desktop views. The UI screens should reflect the user stories, such as a blank canvas on launch, media library access, and settings for auto-save.
-I must ensure that the user stories are clear, the acceptance criteria are testable, and the UI screens align with the user's UX considerations. Also, keeping the language professional and structured as per the user's previous requests.*
----
 
-Understood! Let’s refocus on **user stories** and **acceptance criteria** to define requirements before jumping into UI screens. Below is a structured breakdown based on your UX priorities, including the intuitiveness considerations you highlighted:
-
----
 
 # **User Stories & Acceptance Criteria**  
 *(Prioritized for MVP)*  
@@ -125,4 +110,3 @@ Understood! Let’s refocus on **user stories** and **acceptance criteria** to d
 2. **Spatial Context**: Media stickers let users associate ideas visually (e.g., audio note next to a sketch).  
 3. **Progressive Disclosure**: Advanced features are hidden but easily discoverable, avoiding clutter.  
 
-Would you like me to refine any specific user story or add more edge cases?
