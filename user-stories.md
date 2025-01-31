@@ -110,3 +110,143 @@
 2. **Spatial Context**: Media stickers let users associate ideas visually (e.g., audio note next to a sketch).  
 3. **Progressive Disclosure**: Advanced features are hidden but easily discoverable, avoiding clutter.  
 
+--- 
+
+Here’s how to integrate the **Sticker Feature** and **Sticker Shop** into the existing PRD, user stories, and journey map while preserving the core MVP scope:
+
+---
+
+# Addendum to PRD: Sticker Feature & Monetization
+
+---
+
+## **New User Stories**  
+### **1. User Story: Sticker-Based Creativity**  
+**As a creative user**,  
+**I want** to add themed stickers (static/animated) to my canvas,  
+**So that** I can visually enhance my notes and brainstorm playfully.  
+
+#### **Acceptance Criteria**  
+- **AC1.1**: Sticker Library with categories (e.g., Productivity, Memes, Seasonal).  
+- **AC1.2**: Drag, resize, and rotate stickers like other canvas elements.  
+- **AC1.3**: Animated stickers play on canvas (GIF/APNG formats).  
+- **AC1.4**: Users can "favorite" frequently used stickers.  
+
+---
+
+### **2. User Story: Sticker Shop & Purchases**  
+**As a user seeking customization**,  
+**I want** to browse and buy sticker packs from a Sticker Shop,  
+**So that** I can access exclusive designs to personalize my workspace.  
+
+#### **Acceptance Criteria**  
+- **AC2.1**: Sticker Shop UI with sections: Featured, Free Monthly, Top Selling.  
+- **AC2.2**: In-app purchases (IAP) via Apple Pay/Google Pay/credit card.  
+- **AC2.3**: Free stickers require watching a 15s ad or sharing the app.  
+- **AC2.4**: Preview sticker packs before purchase.  
+
+---
+
+### **3. User Story: User-Generated Stickers**  
+**As a designer/creator**,  
+**I want** to upload and sell my sticker packs on the Sticker Shop,  
+**So that** I can monetize my creativity and expand Pensieve’s library.  
+
+#### **Acceptance Criteria**  
+- **AC3.1**: Sticker upload portal with format guidelines (PNG/GIF, max 500KB).  
+- **AC3.2**: Revenue split (e.g., 70% to creator, 30% to Pensieve).  
+- **AC3.3**: Moderation system to block inappropriate content.  
+
+---
+
+## **Updates to User Journey Map**  
+### **New Stages**  
+| **Stage**       | **User Action**                                                | **Pensieve Response**                                                                 |  
+|-----------------|----------------------------------------------------------------|---------------------------------------------------------------------------------------|  
+| **Discover**    | Seeks fun ways to customize notes.                            | Prompts "Explore Stickers" button on canvas toolbar.                                  |  
+| **Purchase**    | Buys a sticker pack via IAP or ad-supported free stickers.    | Unlocks pack instantly; syncs across devices.                                         |  
+| **Create**      | Uploads custom stickers for sale.                             | Guides through approval process; tracks earnings in profile.                         |  
+
+---
+
+## **Updates to Key Features**  
+### **Sticker Library**  
+- **Categorized Stickers**: Browse by mood, use case, or artist.  
+- **Search**: Filter by keywords (e.g., "cats", "work").  
+- **Offline Access**: Downloaded stickers available without internet.  
+
+### **Sticker Shop**  
+- **Revenue Streams**:  
+  1. **Paid Packs**: $0.99–$4.99 per pack.  
+  2. **Subscription**: $2.99/month for premium sticker access.  
+  3. **Ad-Supported**: Watch ads to unlock free packs.  
+  4. **Creator Earnings**: 70% revenue share on sold packs.  
+
+---
+
+## **UI Screens to Add**  
+### **1. Sticker Library Screen**  
+- **Mobile**: Bottom sheet with tabs (Categories, Favorites, Recent).  
+- **Desktop**: Left sidebar with expandable folders.  
+
+### **2. Sticker Shop Screen**  
+- **Components**:  
+  - Featured banner carousel.  
+  - "Free Sticker of the Month" section.  
+  - Purchase history and download queue.  
+
+### **3. Sticker Upload Portal**  
+- **Components**:  
+  - Drag-and-drop zone for sticker files.  
+  - Tagging system (keywords, categories).  
+  - Earnings dashboard for creators.  
+
+---
+
+## **Technical Requirements**  
+### **Frontend**  
+- **Sticker Rendering**:  
+  - **Lottie** for animated stickers (mobile).  
+  - **APNG.js** for web animations.  
+- **IAP Integration**:  
+  - **RevenueCat** (mobile) + **Stripe** (web).  
+
+### **Backend**  
+- **Database**:  
+  - `sticker_packs`: id, price, tags, creator_id.  
+  - `user_stickers`: user_id, sticker_id, purchase_date.  
+- **Storage**:  
+  - CDN (Cloudflare) for fast sticker delivery.  
+  - S3 bucket for user-uploaded stickers.  
+
+### **Moderation**  
+- **Automated**: AWS Rekognition (NSFW detection).  
+- **Manual**: Admin dashboard for flagging/reviewing.  
+
+---
+
+## **Edge Cases**  
+- **Failed Purchase**: Retry IAP with original price locked.  
+- **Sticker Format Rejected**: Notify creator with rejection reasons.  
+- **Duplicate Stickers**: Detect and block copycat uploads via image hashing.  
+
+---
+
+## **Metrics for Success**  
+1. **Monetization**:  
+   - 20% of MAUs make at least one sticker purchase.  
+   - $5 average revenue per paying user (ARPPU).  
+2. **Creator Engagement**:  
+   - 500+ user-generated sticker packs in Year 1.  
+
+---
+
+## **Updates to Existing Sections**  
+### **User Journey Map Additions**  
+- **Stage: Capture** → Stickers added alongside notes/media.  
+- **Stage: Organize** → Stickers used to visually group ideas.  
+
+### **UI Screens**  
+- **Canvas Toolbar**: Add "Stickers" icon next to "+" button.  
+
+
