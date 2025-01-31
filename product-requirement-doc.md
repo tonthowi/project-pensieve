@@ -360,3 +360,107 @@ For deeper insights, explore [Heptabase](https://heptabase.com) or [Scrintal](ht
 Pensieve isn’t just a tool—it’s a *mental hygiene* product. By treating idea capture as a biological need (like the "brain dump" morning ritual), it redefines how users interact with their thoughts. Pensieve’s MVP focuses on becoming the fastest, most intuitive way to externalize thoughts.
 
 *“Human minds weren’t built to store tasks, ideas, or worries. Pensieve is the external cortex we all need.”* 
+
+---
+
+Here’s how to integrate the **Sticker Feature** and **Sticker Shop** into the existing PRD, user stories, and journey map while preserving the core MVP scope:
+
+---
+
+# Addendum to PRD: Sticker Feature & Monetization
+
+---
+
+## **Updates to User Journey Map**  
+### **New Stages**  
+| **Stage**       | **User Action**                                                | **Pensieve Response**                                                                 |  
+|-----------------|----------------------------------------------------------------|---------------------------------------------------------------------------------------|  
+| **Discover**    | Seeks fun ways to customize notes.                            | Prompts "Explore Stickers" button on canvas toolbar.                                  |  
+| **Purchase**    | Buys a sticker pack via IAP or ad-supported free stickers.    | Unlocks pack instantly; syncs across devices.                                         |  
+| **Create**      | Uploads custom stickers for sale.                             | Guides through approval process; tracks earnings in profile.                         |  
+
+---
+
+## **Updates to Key Features**  
+### **Sticker Library**  
+- **Categorized Stickers**: Browse by mood, use case, or artist.  
+- **Search**: Filter by keywords (e.g., "cats", "work").  
+- **Offline Access**: Downloaded stickers available without internet.  
+
+### **Sticker Shop**  
+- **Revenue Streams**:  
+  1. **Paid Packs**: $0.99–$4.99 per pack.  
+  2. **Subscription**: $2.99/month for premium sticker access.  
+  3. **Ad-Supported**: Watch ads to unlock free packs.  
+  4. **Creator Earnings**: 70% revenue share on sold packs.  
+
+---
+
+## **UI Screens to Add**  
+### **1. Sticker Library Screen**  
+- **Mobile**: Bottom sheet with tabs (Categories, Favorites, Recent).  
+- **Desktop**: Left sidebar with expandable folders.  
+
+### **2. Sticker Shop Screen**  
+- **Components**:  
+  - Featured banner carousel.  
+  - "Free Sticker of the Month" section.  
+  - Purchase history and download queue.  
+
+### **3. Sticker Upload Portal**  
+- **Components**:  
+  - Drag-and-drop zone for sticker files.  
+  - Tagging system (keywords, categories).  
+  - Earnings dashboard for creators.  
+
+---
+
+## **Technical Requirements**  
+### **Frontend**  
+- **Sticker Rendering**:  
+  - **Lottie** for animated stickers (mobile).  
+  - **APNG.js** for web animations.  
+- **IAP Integration**:  
+  - **RevenueCat** (mobile) + **Stripe** (web).  
+
+### **Backend**  
+- **Database**:  
+  - `sticker_packs`: id, price, tags, creator_id.  
+  - `user_stickers`: user_id, sticker_id, purchase_date.  
+- **Storage**:  
+  - CDN (Cloudflare) for fast sticker delivery.  
+  - S3 bucket for user-uploaded stickers.  
+
+### **Moderation**  
+- **Automated**: AWS Rekognition (NSFW detection).  
+- **Manual**: Admin dashboard for flagging/reviewing.  
+
+---
+
+## **Edge Cases**  
+- **Failed Purchase**: Retry IAP with original price locked.  
+- **Sticker Format Rejected**: Notify creator with rejection reasons.  
+- **Duplicate Stickers**: Detect and block copycat uploads via image hashing.  
+
+---
+
+## **Metrics for Success**  
+1. **Monetization**:  
+   - 20% of MAUs make at least one sticker purchase.  
+   - $5 average revenue per paying user (ARPPU).  
+2. **Creator Engagement**:  
+   - 500+ user-generated sticker packs in Year 1.  
+
+---
+
+## **Updates to Existing Sections**  
+### **User Journey Map Additions**  
+- **Stage: Capture** → Stickers added alongside notes/media.  
+- **Stage: Organize** → Stickers used to visually group ideas.  
+
+### **UI Screens**  
+- **Canvas Toolbar**: Add "Stickers" icon next to "+" button.  
+
+---
+
+This integration keeps the MVP’s focus on frictionless idea capture while adding a scalable monetization layer. The sticker system aligns with Pensieve’s playful, neuro-friendly ethos without overcomplicating the core UX.
