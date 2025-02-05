@@ -6,5 +6,6 @@
 3. [User Stories](https://github.com/tonthowi/project-pensieve/blob/master/user-stories.md)
 4. [Tone of Voice](https://github.com/tonthowi/project-pensieve/blob/master/tone-of-voice.md)
 6. [UI Wireframes in Figma](https://www.figma.com/design/Q6oh7BRxWcTceUDYhrWjmY/Project-Pensieve?node-id=7-17&t=Kv87hfHtJzqSLpmp-4)
-#### Other
-1. [Product Positioning & Value: Pensieve VS Canva](https://github.com/tonthowi/project-pensieve/blob/master/product-positioning-and-value.md)
+#### Product Positioning & Value
+1. [Pensieve VS Canva](https://github.com/tonthowi/project-pensieve/blob/master/product-positioning-and-value.md)
+2. [Pensieve It VS Apple FreeForm](https://github.com/tonthowi/project-pensieve/blob/master/product-positioning-and-value-2.md)
