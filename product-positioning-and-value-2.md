@@ -1,4 +1,4 @@
-#Pensieve It VS Apple FreeForm
+# Pensieve It VS Apple FreeForm
 
 Apple’s Freeform app certainly has a similar premise—an infinite whiteboard for brainstorming and collaboration—so it’s natural to see overlap with Pensieve It. But if you take a closer look, there’s still room to differentiate and carve out your own niche.
 
