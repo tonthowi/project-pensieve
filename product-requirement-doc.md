@@ -343,6 +343,8 @@ This merged & updated PRD ensures we retain the valuable insights from earlier d
 ---
 
 **References & Additional Context**  
-- [Heptabase](https://heptabase.com), [Scrintal](https://scrintal.com) for reference on advanced mind-mapping/visual linking.  
+- [Heptabase](https://heptabase.com), [Scrintal](https://scrintal.com) for reference on advanced mind-mapping/visual linking.
+- [Updated PRD version 4.2](https://github.com/tonthowi/project-pensieve/blob/master/product-requirement-doc-4-2.md)
+- [Updated PRD version 4.3](https://github.com/tonthowi/project-pensieve/blob/master/product-requirement-doc-4-3.md)
 
 _End of Document_
